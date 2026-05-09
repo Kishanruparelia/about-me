@@ -120,4 +120,4 @@ GATE 2019 · 98th Percentile · AIR 2359
 
 If you're building something in fintech, AI, or SaaS and need someone who can think at the product level and ship at the engineering level — reach out.
 
-[kishanruparelia@gmail.com](mailto:kishanruparelia@gmail.com) · [LinkedIn](https://linkedin.com/in/kishanruparelia)
+[kishan.ruparelia10@gmail.com](mailto:kishanruparelia@gmail.com) · [LinkedIn](https://linkedin.com/in/kishanruparelia)
