@@ -1,586 +1,391 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kishan Ruparelia — Senior Product Manager, Growth & AI</title>
-<meta name="description" content="Senior PM with 7+ years in fintech and SaaS. Built $25M+ revenue engines, shipped AI products, full-stack capable.">
+<title>Kishan Ruparelia — AI Product Manager</title>
+<meta name="description" content="AI Product Manager with 7+ years in fintech. Shipping LLMs, agentic systems and growth products in production.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #ffffff;
-    --bg-soft: #f7f9fc;
-    --bg-card: #ffffff;
-    --text: #0a2540;
-    --text-soft: #425466;
-    --text-muted: #697386;
-    --accent: #635bff;
-    --accent-soft: #f0eefe;
-    --border: #e3e8ee;
-    --green: #00d924;
-    --gradient: linear-gradient(135deg, #635bff 0%, #00d4ff 100%);
-  }
-  
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
-  html { scroll-behavior: smooth; }
-  
-  body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  
-  /* ===== NAV ===== */
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-    padding: 16px 0;
-  }
-  
-  .nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-logo {
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: -0.3px;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    color: var(--text-soft);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-  
-  .nav-links a:hover { color: var(--accent); }
-  
-  .nav-cta {
-    background: var(--text);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: all 0.2s;
-  }
-  
-  .nav-cta:hover { background: #1a3457; transform: translateY(-1px); }
-  
-  /* ===== HERO ===== */
-  .hero {
-    padding: 100px 0 80px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -200px;
-    right: -100px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(99, 91, 255, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-  
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--green);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  
-  .hero h1 {
-    font-size: 64px;
-    line-height: 1.05;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 24px;
-    max-width: 900px;
-  }
-  
-  .hero h1 .highlight {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  .hero-sub {
-    font-size: 20px;
-    color: var(--text-soft);
-    max-width: 720px;
-    margin-bottom: 40px;
-    line-height: 1.5;
-  }
-  
-  .hero-actions {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  
-  .btn {
-    padding: 14px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .btn-primary {
-    background: var(--text);
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    background: #1a3457;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(10, 37, 64, 0.15);
-  }
-  
-  .btn-secondary {
-    background: white;
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-  
-  .btn-secondary:hover {
-    border-color: var(--text);
-    transform: translateY(-2px);
-  }
-  
-  /* ===== METRICS BAR ===== */
-  .metrics {
-    background: var(--bg-soft);
-    padding: 60px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  
-  .metrics-label {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-bottom: 32px;
-  }
-  
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-  
-  .metric {
-    text-align: center;
-  }
-  
-  .metric-value {
-    font-size: 42px;
-    font-weight: 800;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-    margin-bottom: 8px;
-    letter-spacing: -1px;
-  }
-  
-  .metric-label {
-    font-size: 14px;
-    color: var(--text-soft);
-    font-weight: 500;
-  }
-  
-  /* ===== SECTION ===== */
-  section.content-section {
-    padding: 100px 0;
-  }
-  
-  .section-tag {
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-bottom: 12px;
-  }
-  
-  .section-title {
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: -1.2px;
-    margin-bottom: 16px;
-    line-height: 1.15;
-  }
-  
-  .section-sub {
-    font-size: 18px;
-    color: var(--text-soft);
-    max-width: 680px;
-    margin-bottom: 60px;
-  }
-  
-  /* ===== CASE STUDIES ===== */
-  .case-grid {
-    display: grid;
-    gap: 24px;
-  }
-  
-  .case-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 40px;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .case-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--gradient);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s;
-  }
-  
-  .case-card:hover {
-    border-color: #c5cdd9;
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.08);
-  }
-  
-  .case-card:hover::before {
-    transform: scaleY(1);
-  }
-  
-  .case-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .case-company {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  
-  .case-title {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.25;
-  }
-  
-  .case-tag {
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  
-  .case-body {
-    color: var(--text-soft);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }
-  
-  .case-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 20px 0;
-    border-top: 1px solid var(--border);
-  }
-  
-  .case-stat-value {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.5px;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  
-  .case-stat-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-  
-  /* ===== ABOUT ===== */
-  .about {
-    background: var(--bg-soft);
-    padding: 100px 0;
-  }
-  
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 60px;
-    align-items: start;
-  }
-  
-  .about-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-  }
-  
-  .about-card h3 {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-  }
-  
-  .skill-row {
-    margin-bottom: 16px;
-  }
-  
-  .skill-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  
-  .skill-tag {
-    background: var(--bg-soft);
-    border: 1px solid var(--border);
-    color: var(--text-soft);
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .about-content p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--text-soft);
-    margin-bottom: 18px;
-  }
-  
-  .about-content p strong {
-    color: var(--text);
-    font-weight: 600;
-  }
-  
-  /* ===== CTA ===== */
-  .cta-section {
-    padding: 120px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(99, 91, 255, 0.06) 0%, transparent 60%);
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .cta-section h2 {
-    font-size: 56px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-  
-  .cta-section h2 .highlight {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .cta-section p {
-    font-size: 19px;
-    color: var(--text-soft);
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .cta-btn {
-    background: var(--text);
-    color: white;
-    padding: 18px 36px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 17px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    transition: all 0.3s;
-    box-shadow: 0 12px 32px rgba(10, 37, 64, 0.15);
-  }
-  
-  .cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.25);
-    background: #1a3457;
-  }
-  
-  .cta-meta {
-    margin-top: 24px;
-    color: var(--text-muted);
-    font-size: 14px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--text);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  footer .name {
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-  }
-  
-  footer .links {
-    display: flex;
-    gap: 24px;
-  }
-  
-  footer .links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-  }
-  
-  footer .links a:hover { color: white; }
-  
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .hero { padding: 60px 0 50px; }
-    .hero h1 { font-size: 38px; letter-spacing: -1px; }
-    .hero-sub { font-size: 17px; }
-    .nav-links { display: none; }
-    .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    .metric-value { font-size: 32px; }
-    section.content-section { padding: 60px 0; }
-    .section-title { font-size: 30px; }
-    .case-card { padding: 28px; }
-    .case-title { font-size: 21px; }
-    .case-stats { grid-template-columns: 1fr; gap: 16px; }
-    .case-stat-value { font-size: 24px; }
-    .about { padding: 60px 0; }
-    .about-grid { grid-template-columns: 1fr; gap: 32px; }
-    .cta-section { padding: 70px 0; }
-    .cta-section h2 { font-size: 36px; }
-    .cta-section p { font-size: 16px; }
-  }
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-2: #555555;
+  --ink-3: #888888;
+  --line: #e5e5e5;
+  --line-soft: #eeeeee;
+  --accent: #111111;
+  --r: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.mono { font-family: 'DM Mono', ui-monospace, monospace; }
+::selection { background: #ddd; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* ---- NAV ---- */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 250, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 960px; margin: 0 auto;
+  padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-name {
+  font-weight: 600; font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links .cta-link {
+  background: var(--ink); color: #fff;
+  padding: 8px 16px; border-radius: 8px;
+  font-size: 13px; font-weight: 600;
+  transition: opacity 0.15s;
+}
+.nav-links .cta-link:hover { opacity: 0.85; color: #fff; }
+
+/* ---- HERO ---- */
+.hero {
+  padding: 100px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 500;
+  color: var(--ink-2);
+  margin-bottom: 28px;
+  font-family: 'DM Mono', monospace;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 64px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 24px;
+  max-width: 820px;
+  text-wrap: balance;
+}
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+.hero-actions {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.btn-dark {
+  background: var(--ink); color: #fff;
+}
+.btn-dark:hover { opacity: 0.85; }
+.btn-outline {
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn-outline:hover { border-color: var(--ink-3); }
+
+/* ---- METRICS ---- */
+.metrics {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.metric {
+  padding: 0 24px;
+  border-right: 1px solid var(--line);
+}
+.metric:first-child { padding-left: 0; }
+.metric:last-child { border-right: none; padding-right: 0; }
+.metric-val {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.metric-lbl {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+/* ---- SECTION ---- */
+.section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--line);
+}
+.section:last-of-type { border-bottom: none; }
+
+.section-head {
+  margin-bottom: 56px;
+}
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+  font-family: 'DM Mono', monospace;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-size: 17px;
+  color: var(--ink-2);
+  max-width: 580px;
+  line-height: 1.55;
+}
+
+/* ---- CASE CARDS ---- */
+.case-list {
+  display: flex; flex-direction: column;
+  gap: 16px;
+}
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 32px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.case-card:hover {
+  border-color: #ccc;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.case-top {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; gap: 12px; flex-wrap: wrap;
+}
+.case-where {
+  font-size: 13px;
+  color: var(--ink-3);
+  font-family: 'DM Mono', monospace;
+}
+.case-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+}
+.case-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.case-body {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 680px;
+}
+.case-nums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
+}
+.case-n-val {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.case-n-lbl {
+  font-size: 12px;
+  color: var(--ink-3);
+  line-height: 1.3;
+}
+
+/* ---- ABOUT ---- */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.about-prose p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin-bottom: 18px;
+}
+.about-prose p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.toolkit {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 28px;
+}
+.toolkit-heading {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 20px;
+  font-family: 'DM Mono', monospace;
+}
+.tk-group { margin-bottom: 20px; }
+.tk-group:last-child { margin-bottom: 0; }
+.tk-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  font-family: 'DM Mono', monospace;
+}
+.tk-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tk-tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: border-color 0.15s;
+}
+.tk-tag:hover { border-color: var(--ink-3); }
+
+/* ---- CTA ---- */
+.cta {
+  padding: 96px 0;
+  text-align: center;
+}
+.cta h2 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.cta p {
+  font-size: 18px;
+  color: var(--ink-2);
+  max-width: 520px;
+  margin: 0 auto 36px;
+  line-height: 1.55;
+}
+.cta-email {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--ink-3);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+}
+footer .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.foot-left {
+  font-size: 14px; font-weight: 500; color: var(--ink-3);
+}
+.foot-right {
+  display: flex; gap: 20px;
+}
+.foot-right a {
+  font-size: 13px; color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.foot-right a:hover { color: var(--ink); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 680px) {
+  .nav-links li:not(:last-child) a:not(.cta-link) { display: none; }
+  .hero { padding: 64px 0 56px; }
+  .hero h1 { font-size: 36px; }
+  .hero-sub { font-size: 16px; }
+  .metrics { padding: 48px 0; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+  .metric { border-right: none; padding: 0; }
+  .metric:nth-child(odd) { border-right: 1px solid var(--line); padding-right: 20px; }
+  .metric:nth-child(even) { padding-left: 20px; }
+  .metric-val { font-size: 32px; }
+  .section { padding: 64px 0; }
+  .case-nums { grid-template-columns: 1fr; gap: 12px; }
+  .case-n-val { font-size: 20px; }
+  .case-nums .cn { display: flex; align-items: baseline; justify-content: space-between; }
+  .about-layout { grid-template-columns: 1fr; gap: 40px; }
+  .cta h2 { font-size: 32px; }
+  .foot-right { width: 100%; }
+}
 </style>
 </head>
 <body>
@@ -588,300 +393,313 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">Kishan Ruparelia</div>
+    <a href="#" class="nav-name">Kishan Ruparelia</a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:Kishan.ruparelia10@gmail.com?subject=Let's%20talk" class="cta-link">Get in touch</a></li>
     </ul>
-    <a href="mailto:kishanruparelia@gmail.com?subject=Let's%20talk" class="nav-cta">Hire me</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Open to remote roles · PM &amp; Growth
+  <div class="wrap">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      Available for consulting
     </div>
-    <h1>I build <span class="highlight">growth engines</span> and <span class="highlight">AI products</span> that move real revenue.</h1>
-    <p class="hero-sub">
-      Senior Product Manager with 7+ years owning $25M+ revenue lines in fintech and SaaS. I ship industry-first products, build AI tools end to end, and lead cross-functional teams that execute fast.
-    </p>
+    <h1>I build production AI and the business systems that depend on it.</h1>
+    <p class="hero-sub">AI Product Manager with 7 years in fintech. I own a 60+ use case AI roadmap at SBI Securities, shipped an LLM platform serving 1M+ retail investors, and hold P&amp;L accountability for ₹210Cr+ in annual brokerage. Business-heavy. Ships in regulated environments.</p>
     <div class="hero-actions">
-      <a href="mailto:kishanruparelia@gmail.com?subject=Let's%20talk" class="btn btn-primary">
-        Let's talk →
-      </a>
-      <a href="#work" class="btn btn-secondary">See my work</a>
+      <a href="mailto:Kishan.ruparelia10@gmail.com?subject=Let's%20talk" class="btn btn-dark">Let's talk →</a>
+      <a href="#work" class="btn btn-outline">See my work</a>
     </div>
   </div>
 </section>
 
 <!-- METRICS -->
 <section class="metrics">
-  <div class="container">
-    <div class="metrics-label">Numbers I've owned</div>
+  <div class="wrap">
     <div class="metrics-grid">
       <div class="metric">
-        <div class="metric-value">$25M+</div>
-        <div class="metric-label">Annual revenue owned</div>
+        <div class="metric-val">60+</div>
+        <div class="metric-lbl">AI use cases in roadmap</div>
       </div>
       <div class="metric">
-        <div class="metric-value">1M+</div>
-        <div class="metric-label">Active users impacted</div>
+        <div class="metric-val">1M+</div>
+        <div class="metric-lbl">Users on production LLM</div>
       </div>
       <div class="metric">
-        <div class="metric-value">170K+</div>
-        <div class="metric-label">Customers reactivated</div>
+        <div class="metric-val">₹210Cr</div>
+        <div class="metric-lbl">Annual brokerage owned</div>
       </div>
       <div class="metric">
-        <div class="metric-value">7+</div>
-        <div class="metric-label">Years in fintech &amp; SaaS</div>
+        <div class="metric-val">7+</div>
+        <div class="metric-lbl">Years in fintech</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WORK / CASE STUDIES -->
-<section class="content-section" id="work">
-  <div class="container">
-    <div class="section-tag">Selected Work</div>
-    <h2 class="section-title">Products that moved the needle.</h2>
-    <p class="section-sub">A few things I've built and scaled across fintech, AI, and B2B SaaS. Real numbers, real outcomes.</p>
-    
-    <div class="case-grid">
-      
-      <!-- Case 1: MTF Baskets -->
-      <div class="case-card">
-        <div class="case-header">
-          <div>
-            <div class="case-company">5paisa Capital · Fintech</div>
-            <div class="case-title">MTF Baskets — Industry-first investment product</div>
-          </div>
-          <div class="case-tag">Product · Growth</div>
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Selected work</div>
+      <h2 class="section-title">Things I have shipped.</h2>
+      <p class="section-sub">Six projects across fintech, AI and B2B SaaS. All in production. Numbers are real.</p>
+    </div>
+
+    <div class="case-list">
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">SBI Securities · Fintech · Current</span>
+          <span class="case-badge">LLM · Production AI</span>
         </div>
-        <p class="case-body">
-          Conceptualised and shipped India's first basket-based margin trading product. Took it from idea to live in 8 weeks. Redesigned pricing and lifecycle to scale the entire margin book by 67%.
-        </p>
-        <div class="case-stats">
-          <div>
-            <div class="case-stat-value">$12M</div>
-            <div class="case-stat-label">Funded book in 30 days</div>
+        <h3 class="case-title">LLM Support Automation for 1M+ Retail Investors</h3>
+        <p class="case-body">Built SBI's investor support platform on Claude API from the ground up. The system handles retail investor queries on margin trading through RAG pipelines and vector search, with hallucination guardrails, prompt evaluation and eligibility logic built specifically for a SEBI-regulated environment. Runs in production today with no human fallback for in-scope queries.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">1M+</div>
+            <div class="case-n-lbl">Active users served</div>
           </div>
-          <div>
-            <div class="case-stat-value">$240M</div>
-            <div class="case-stat-label">Total book scaled to</div>
+          <div class="cn">
+            <div class="case-n-val">60+</div>
+            <div class="case-n-lbl">AI use cases on roadmap</div>
           </div>
-          <div>
-            <div class="case-stat-value">38%</div>
-            <div class="case-stat-label">Funded accounts growth</div>
+          <div class="cn">
+            <div class="case-n-val">SEBI</div>
+            <div class="case-n-lbl">Regulated environment</div>
           </div>
         </div>
-      </div>
-      
-      <!-- Case 2: AI Basketball -->
-      <div class="case-card">
-        <div class="case-header">
-          <div>
-            <div class="case-company">SparkMySport · USA · Sports Tech</div>
-            <div class="case-title">AI Basketball Analytics System</div>
-          </div>
-          <div class="case-tag">AI · Computer Vision</div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">5paisa Capital · Fintech</span>
+          <span class="case-badge">Product · Growth</span>
         </div>
-        <p class="case-body">
-          Built a Python and YOLO-based computer vision pipeline that auto-detects scoring events, identifies jersey numbers, and generates highlight clips from raw match footage. Live with US coaching teams. Managed remote ops team end to end.
-        </p>
-        <div class="case-stats">
-          <div>
-            <div class="case-stat-value">Live</div>
-            <div class="case-stat-label">Production deployment</div>
+        <h3 class="case-title">MTF Baskets: India's first basket-based margin trading product</h3>
+        <p class="case-body">Took the concept from zero to live in 8 weeks. Redesigned pricing and the full user lifecycle to scale the margin book 67%. No comparable product existed in the Indian market at the time.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">₹100Cr+</div>
+            <div class="case-n-lbl">Funded book in 30 days</div>
           </div>
-          <div>
-            <div class="case-stat-value">USA</div>
-            <div class="case-stat-label">Paying client base</div>
+          <div class="cn">
+            <div class="case-n-val">₹2000Cr</div>
+            <div class="case-n-lbl">Total book scaled to</div>
           </div>
-          <div>
-            <div class="case-stat-value">4 yrs</div>
-            <div class="case-stat-label">Active engagement</div>
+          <div class="cn">
+            <div class="case-n-val">38%</div>
+            <div class="case-n-lbl">Funded accounts growth</div>
           </div>
         </div>
-      </div>
-      
-      <!-- Case 3: SBI Growth -->
-      <div class="case-card">
-        <div class="case-header">
-          <div>
-            <div class="case-company">SBI Securities · Fintech</div>
-            <div class="case-title">Lifecycle automation &amp; reactivation engine</div>
-          </div>
-          <div class="case-tag">Growth · Lifecycle</div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">SparkMySport · USA · Sports Tech</span>
+          <span class="case-badge">AI · Computer Vision</span>
         </div>
-        <p class="case-body">
-          Designed and shipped a multi-channel reactivation engine on MoEngage targeting dormant retail investors. Combined behavioural triggers, segment-specific journeys, and product-led nudges to bring back users at scale.
-        </p>
-        <div class="case-stats">
-          <div>
-            <div class="case-stat-value">170K+</div>
-            <div class="case-stat-label">Customers reactivated</div>
+        <h3 class="case-title">AI Basketball Analytics System</h3>
+        <p class="case-body">Built a Python and YOLO computer vision pipeline that watches raw match footage and spits out scoring events, jersey numbers and highlight clips automatically. US coaching teams have been using it in production for four years. I managed the remote tagging ops team end to end.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">Live</div>
+            <div class="case-n-lbl">Production deployment</div>
           </div>
-          <div>
-            <div class="case-stat-value">$3.6M+</div>
-            <div class="case-stat-label">Incremental revenue</div>
+          <div class="cn">
+            <div class="case-n-val">4 yrs</div>
+            <div class="case-n-lbl">Active in production</div>
           </div>
-          <div>
-            <div class="case-stat-value">3x</div>
-            <div class="case-stat-label">Activation lift</div>
+          <div class="cn">
+            <div class="case-n-val">USA</div>
+            <div class="case-n-lbl">Paying client base</div>
           </div>
         </div>
-      </div>
-      
-      <!-- Case 4: Glass ERP -->
-      <div class="case-card">
-        <div class="case-header">
-          <div>
-            <div class="case-company">Independent · Manufacturing</div>
-            <div class="case-title">Glass Manufacturing ERP — Built from zero</div>
-          </div>
-          <div class="case-tag">Full-Stack · SaaS</div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">SBI Securities · Fintech</span>
+          <span class="case-badge">Growth · Lifecycle</span>
         </div>
-        <p class="case-body">
-          Designed and shipped a vertical B2B SaaS for a glass manufacturer covering quotation, billing, inventory, production, and dispatch. Built end to end with Next.js, TypeScript, and PostgreSQL. Live with a paying client.
-        </p>
-        <div class="case-stats">
-          <div>
-            <div class="case-stat-value">Live</div>
-            <div class="case-stat-label">Paying client</div>
+        <h3 class="case-title">Reactivation engine for dormant retail investors</h3>
+        <p class="case-body">Designed a multi-channel lifecycle system on MoEngage targeting investors who had gone quiet. Behavioural triggers, segment-specific journeys and product nudges. The 1.7 lakh number speaks for itself.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">1.7L+</div>
+            <div class="case-n-lbl">Customers reactivated</div>
           </div>
-          <div>
-            <div class="case-stat-value">5</div>
-            <div class="case-stat-label">Modules shipped</div>
+          <div class="cn">
+            <div class="case-n-val">₹30Cr+</div>
+            <div class="case-n-lbl">Incremental brokerage</div>
           </div>
-          <div>
-            <div class="case-stat-value">E2E</div>
-            <div class="case-stat-label">Solo built &amp; deployed</div>
+          <div class="cn">
+            <div class="case-n-val">3×</div>
+            <div class="case-n-lbl">Activation lift</div>
           </div>
         </div>
-      </div>
-      
-      <!-- Case 5: F&O -->
-      <div class="case-card">
-        <div class="case-header">
-          <div>
-            <div class="case-company">SBI Securities · Fintech</div>
-            <div class="case-title">F&amp;O activation engine — 64% YoY growth</div>
-          </div>
-          <div class="case-tag">Growth · Activation</div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">SBI Securities · Fintech</span>
+          <span class="case-badge">Growth · Activation</span>
         </div>
-        <p class="case-body">
-          Owned the full derivatives activation funnel — from onboarding screens to in-app nudges to lifecycle journeys. Scaled monthly activations 3x and beat revenue target by 35%.
-        </p>
-        <div class="case-stats">
-          <div>
-            <div class="case-stat-value">3x</div>
-            <div class="case-stat-label">Monthly activations</div>
+        <h3 class="case-title">F&amp;O activation engine: 64% YoY growth</h3>
+        <p class="case-body">Owned the full derivatives activation funnel from onboarding to in-app nudges to lifecycle journeys. Scaled monthly activations from 45K to 74K and beat the ₹87Cr revenue target by 36%.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">64%</div>
+            <div class="case-n-lbl">YoY activation growth</div>
           </div>
-          <div>
-            <div class="case-stat-value">$14.2M</div>
-            <div class="case-stat-label">Brokerage revenue</div>
+          <div class="cn">
+            <div class="case-n-val">₹118Cr</div>
+            <div class="case-n-lbl">Revenue delivered</div>
           </div>
-          <div>
-            <div class="case-stat-value">135%</div>
-            <div class="case-stat-label">Of target delivered</div>
+          <div class="cn">
+            <div class="case-n-val">136%</div>
+            <div class="case-n-lbl">Of target</div>
           </div>
         </div>
-      </div>
-      
+      </article>
+
+      <article class="case-card">
+        <div class="case-top">
+          <span class="case-where">Independent · Manufacturing</span>
+          <span class="case-badge">Full-Stack · SaaS</span>
+        </div>
+        <h3 class="case-title">Glass Manufacturing ERP, built solo</h3>
+        <p class="case-body">A paying client needed a vertical B2B SaaS. I built it: quotation, billing, inventory, production and dispatch. Next.js, TypeScript and PostgreSQL. Deployed and collecting ₹7K/month subscription. No agency, no team.</p>
+        <div class="case-nums">
+          <div class="cn">
+            <div class="case-n-val">5</div>
+            <div class="case-n-lbl">Modules shipped</div>
+          </div>
+          <div class="cn">
+            <div class="case-n-val">₹7K/mo</div>
+            <div class="case-n-lbl">Active subscription</div>
+          </div>
+          <div class="cn">
+            <div class="case-n-val">Solo</div>
+            <div class="case-n-lbl">Built and deployed</div>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div>
-        <div class="section-tag">About me</div>
-        <h2 class="section-title" style="font-size: 36px;">Builder. Operator. Pragmatist.</h2>
-        <div class="about-card" style="margin-top: 32px;">
-          <h3>Toolkit</h3>
-          <div class="skill-row">
-            <div class="skill-label">PRODUCT &amp; GROWTH</div>
-            <div class="skill-tags">
-              <span class="skill-tag">PLG</span>
-              <span class="skill-tag">A/B Testing</span>
-              <span class="skill-tag">Lifecycle</span>
-              <span class="skill-tag">Pricing</span>
-              <span class="skill-tag">GTM</span>
-              <span class="skill-tag">P&amp;L</span>
-            </div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-label">AI &amp; ENGINEERING</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Claude API</span>
-              <span class="skill-tag">YOLO</span>
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-label">TOOLS</div>
-            <div class="skill-tags">
-              <span class="skill-tag">MoEngage</span>
-              <span class="skill-tag">CleverTap</span>
-              <span class="skill-tag">GA</span>
-              <span class="skill-tag">Mixpanel</span>
-              <span class="skill-tag">Figma</span>
-              <span class="skill-tag">Jira</span>
-            </div>
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Builder. Operator. Pragmatist.</h2>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-prose">
+        <p>I'm an AI Product Manager based in Mumbai. I lead AI product at SBI Securities, where I own a 60+ use case roadmap across LLM bots, agentic automation and NLP workflows. The job is translating messy business problems into production AI that actually works in a regulated environment.</p>
+        <p>My thing is entering domains I know nothing about and shipping anyway. I went from fintech growth to building computer vision for US basketball coaches to standing up an ERP for a glass factory. None of that was familiar ground. All of it is live and paying customers.</p>
+        <p>I write code when I need to, dig into SQL when the data team is swamped, and pick up whatever skill the problem demands. The PM role ends where <strong>the work needs to get done.</strong></p>
+        <p>I take on consulting and advisory work for teams that need to <strong>ship AI that actually works</strong>. Fintech, regulated environments, LLM products, growth systems. If you have a hard problem, let's talk about it.</p>
+      </div>
+
+      <div class="toolkit">
+        <div class="toolkit-heading">Toolkit</div>
+        <div class="tk-group">
+          <div class="tk-label">AI Product</div>
+          <div class="tk-tags">
+            <span class="tk-tag">LLM Products</span>
+            <span class="tk-tag">RAG Pipelines</span>
+            <span class="tk-tag">Agentic AI</span>
+            <span class="tk-tag">Prompt Engineering</span>
+            <span class="tk-tag">Hallucination Controls</span>
+            <span class="tk-tag">AI Metrics</span>
           </div>
         </div>
-      </div>
-      
-      <div class="about-content">
-        <p>
-          I'm a Senior Product Manager based in Mumbai, currently leading <strong>AI product initiatives</strong> at SBI Securities. Over the last 7 years I've owned everything from pricing and lifecycle to acquisition and AI workflows in fintech and B2B SaaS.
-        </p>
-        <p>
-          What I do best is <strong>enter unfamiliar domains and ship</strong>. I went from broking growth to building computer vision for US basketball coaches. From there to designing an ERP for a glass manufacturer. None of these were domains I knew. All of them are live and paying.
-        </p>
-        <p>
-          I think the best PMs are <strong>builders who ship</strong>, not just stakeholders who specify. I write code when I need to, dig into SQL when the data person is busy, and learn whatever skill the problem demands.
-        </p>
-        <p>
-          Right now I'm looking for <strong>remote PM or Growth roles</strong> with fintech, AI, or SaaS companies that move fast. If you're hiring, let's talk.
-        </p>
+        <div class="tk-group">
+          <div class="tk-label">Engineering</div>
+          <div class="tk-tags">
+            <span class="tk-tag">Python</span>
+            <span class="tk-tag">Claude API</span>
+            <span class="tk-tag">YOLO</span>
+            <span class="tk-tag">Next.js</span>
+            <span class="tk-tag">TypeScript</span>
+            <span class="tk-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="tk-group">
+          <div class="tk-label">Product &amp; Growth</div>
+          <div class="tk-tags">
+            <span class="tk-tag">PLG</span>
+            <span class="tk-tag">A/B Testing</span>
+            <span class="tk-tag">Lifecycle</span>
+            <span class="tk-tag">Pricing</span>
+            <span class="tk-tag">GTM</span>
+            <span class="tk-tag">P&amp;L</span>
+          </div>
+        </div>
+        <div class="tk-group">
+          <div class="tk-label">Tools</div>
+          <div class="tk-tags">
+            <span class="tk-tag">MoEngage</span>
+            <span class="tk-tag">CleverTap</span>
+            <span class="tk-tag">Mixpanel</span>
+            <span class="tk-tag">Figma</span>
+            <span class="tk-tag">Jira</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="contact">
-  <div class="container">
-    <h2>Have a problem worth <span class="highlight">solving?</span></h2>
-    <p>Open to senior PM, Growth, or AI product roles — full-time remote or consulting. Reply usually within a few hours.</p>
-    <a href="mailto:kishanruparelia@gmail.com?subject=Let's%20talk%20—%20opportunity" class="cta-btn">
-      Let's talk →
-    </a>
-    <div class="cta-meta">kishanruparelia@gmail.com</div>
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Have a hard problem worth solving?</h2>
+    <p>I work with teams on AI product strategy, LLM builds and growth systems. Fintech, regulated industries, anything genuinely complex. Replies within hours.</p>
+    <a href="mailto:Kishan.ruparelia10@gmail.com?subject=Let's%20talk" class="btn btn-dark">Let's talk →</a>
+    <div class="cta-email">Kishan.ruparelia10@gmail.com</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="name">Kishan Ruparelia</div>
-    <div class="links">
+  <div class="wrap">
+    <div class="foot-left">© 2026 Kishan Ruparelia</div>
+    <div class="foot-right">
       <a href="https://linkedin.com/in/kishanruparelia" target="_blank">LinkedIn</a>
       <a href="https://github.com/Kishanruparelia" target="_blank">GitHub</a>
-      <a href="mailto:kishanruparelia@gmail.com">Email</a>
+      <a href="mailto:Kishan.ruparelia10@gmail.com">Email</a>
     </div>
   </div>
 </footer>
 
+
+<template id="__bundler_thumbnail" data-bg-color="#fafafa">
+  <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="500" fill="#fafafa"/>
+    <rect x="60" y="60" width="120" height="12" rx="6" fill="#111"/>
+    <rect x="60" y="100" width="480" height="32" rx="8" fill="#111"/>
+    <rect x="60" y="142" width="360" height="32" rx="8" fill="#111"/>
+    <rect x="60" y="200" width="320" height="14" rx="5" fill="#888"/>
+    <rect x="60" y="222" width="280" height="14" rx="5" fill="#888"/>
+    <rect x="60" y="270" width="100" height="36" rx="8" fill="#111"/>
+    <rect x="172" y="270" width="120" height="36" rx="8" fill="#fff" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="60" y="340" width="160" height="10" rx="5" fill="#ddd"/>
+    <rect x="60" y="360" width="680" height="1" fill="#e5e5e5"/>
+    <rect x="60" y="375" width="680" height="70" rx="10" fill="#fff" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="80" y="393" width="200" height="10" rx="4" fill="#ccc"/>
+    <rect x="80" y="411" width="140" height="10" rx="4" fill="#eee"/>
+  </svg>
+</template>
 </body>
 </html>
